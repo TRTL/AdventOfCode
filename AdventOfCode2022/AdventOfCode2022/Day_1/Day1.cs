@@ -8,6 +8,8 @@ namespace AdventOfCode2022.Day_1
 {
     public class Day1
     {
+        //https://adventofcode.com/2022/day/1
+
         public int mostCalories = 0;
         private int top1ElfsCalories = 0;
         private int top2ElfsCalories = 0;

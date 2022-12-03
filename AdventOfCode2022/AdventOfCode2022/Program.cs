@@ -8,11 +8,27 @@ namespace AdventOfCode2022
         {
             Console.WriteLine("Hello, Advent of code 2022!");
 
-            Day1 day1_result1 = new Day1();
+            Day1Method();
 
+        }
+
+        static void Day1Method()
+        {
+            Day1 day1_result1 = new Day1();
             Console.WriteLine(day1_result1.ReadFileAndGetMostCalories());
             Console.WriteLine(day1_result1.ReadFileAndGetMostCaloriesForThreeElfs());
-            
         }
+
+
+
+
+
+
+
+
+
+
+
+
     }
 }
