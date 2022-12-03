@@ -17,7 +17,10 @@ namespace AdventOfCode2022.Day_1
 
         public int ReadFileAndGetMostCalories()
         {
-            using StreamReader sr = new StreamReader("../../../Day_1/input.txt");
+            // I:\CODING\GitHub_AdventOfCode\AdventOfCode\AdventOfCode2022\Day_02
+            // I:\CODING\GitHub_AdventOfCode\AdventOfCode\AdventOfCode2022\Day_2\input.txt
+
+            using StreamReader sr = new StreamReader("../../../Day_01/input.txt");
             string newLine;
             int newCalories = 0;
 
@@ -40,7 +43,7 @@ namespace AdventOfCode2022.Day_1
 
         public int ReadFileAndGetMostCaloriesForThreeElfs()
         {
-            using StreamReader sr = new StreamReader("../../../Day_1/input.txt");
+            using StreamReader sr = new StreamReader("../../../Day_01/input.txt");
             string newLine;
 
             top1ElfsCalories = ReadFileAndGetMostCalories();

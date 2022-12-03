@@ -1,4 +1,5 @@
-﻿using AdventOfCode2022.Day_1;
+﻿using AdventOfCode2022.Day_02;
+using AdventOfCode2022.Day_1;
 
 namespace AdventOfCode2022
 {
@@ -8,7 +9,9 @@ namespace AdventOfCode2022
         {
             Console.WriteLine("Hello, Advent of code 2022!");
 
-            Day1Method();
+            //Day1Method();
+
+            Day2Method();
 
         }
 
@@ -19,7 +22,11 @@ namespace AdventOfCode2022
             Console.WriteLine("Day1 Result2: " + day1_result.ReadFileAndGetMostCaloriesForThreeElfs());
         }
 
-
+        static void Day2Method()
+        {
+            Day2 day2_result = new Day2();
+            Console.WriteLine("Day2 Result1: " + day2_result.ReadFileAndGetScoreWithStrategyGuide());
+        }
 
 
 
