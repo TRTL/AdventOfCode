@@ -1,5 +1,6 @@
-﻿using AdventOfCode2022.Day_02;
-using AdventOfCode2022.Day_1;
+﻿using AdventOfCode2022.Day_1;
+using AdventOfCode2022.Day_02;
+using AdventOfCode2022.Day_03;
 
 namespace AdventOfCode2022
 {
@@ -10,23 +11,30 @@ namespace AdventOfCode2022
             Console.WriteLine("Hello, Advent of code 2022!");
 
             //Day1Method();
-
-            Day2Method();
+            //Day2Method();
+            Day3Method();
 
         }
 
         static void Day1Method()
         {
-            Day1 day1_result = new Day1();
-            Console.WriteLine("Day1 Result1: " + day1_result.ReadFileAndGetMostCalories());
-            Console.WriteLine("Day1 Result2: " + day1_result.ReadFileAndGetMostCaloriesForThreeElfs());
+            Day1 result = new Day1();
+            Console.WriteLine("Day1 Result1: " + result.ReadFileAndGetMostCalories());
+            Console.WriteLine("Day1 Result2: " + result.ReadFileAndGetMostCaloriesForThreeElfs());
         }
 
         static void Day2Method()
         {
-            Day2 day2_result = new Day2();
-            Console.WriteLine("Day2 Result1: " + day2_result.ReadFileAndGetScoreWithStrategyGuide(1));
-            Console.WriteLine("Day2 Result2: " + day2_result.ReadFileAndGetScoreWithStrategyGuide(2));
+            Day2 result = new Day2();
+            Console.WriteLine("Day2 Result1: " + result.ReadFileAndGetScoreWithStrategyGuide(1));
+            Console.WriteLine("Day2 Result2: " + result.ReadFileAndGetScoreWithStrategyGuide(2));
+        }
+
+        static void Day3Method()
+        {
+            Day3 result = new Day3();
+            Console.WriteLine("Day3 Result1: " + result.RucksackCompartments(1));
+            Console.WriteLine("Day3 Result2: " + result.RucksackCompartments(2));
         }
 
 
