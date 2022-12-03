@@ -14,9 +14,9 @@ namespace AdventOfCode2022
 
         static void Day1Method()
         {
-            Day1 day1_result1 = new Day1();
-            Console.WriteLine(day1_result1.ReadFileAndGetMostCalories());
-            Console.WriteLine(day1_result1.ReadFileAndGetMostCaloriesForThreeElfs());
+            Day1 day1_result = new Day1();
+            Console.WriteLine("Day1 Result1: " + day1_result.ReadFileAndGetMostCalories());
+            Console.WriteLine("Day1 Result2: " + day1_result.ReadFileAndGetMostCaloriesForThreeElfs());
         }
 
 
