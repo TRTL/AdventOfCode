@@ -25,7 +25,8 @@ namespace AdventOfCode2022
         static void Day2Method()
         {
             Day2 day2_result = new Day2();
-            Console.WriteLine("Day2 Result1: " + day2_result.ReadFileAndGetScoreWithStrategyGuide());
+            Console.WriteLine("Day2 Result1: " + day2_result.ReadFileAndGetScoreWithStrategyGuide(1));
+            Console.WriteLine("Day2 Result2: " + day2_result.ReadFileAndGetScoreWithStrategyGuide(2));
         }
 
 
