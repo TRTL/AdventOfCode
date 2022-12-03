@@ -13,50 +13,45 @@ namespace AdventOfCode2022.Day_02
         {
             int score = 0;
             using StreamReader sr = new StreamReader("../../../Day_02/input.txt");
-            //using StreamReader sr = new StreamReader("../../../Day_02/input_sample.txt");
             string newLine;
 
-            while ((newLine = sr.ReadLine()) != null)
+            while ((newLine = sr.ReadLine()) != null && newLine != "")
             {
-                string[] moves = newLine.Split(" ");
-                string oponentMove = moves[0];
-                string myMove = moves[1];
 
-                score += GetRoundScore(oponentMove, myMove); 
+                string[] moves = newLine.Split(" ");
+                string oponentSign = ConvertLetterToSign(moves[0]);
+                string mySign = ConvertLetterToSign(moves[1]);
+
+                score += GetScoreForSign(mySign);
+                if (IsWin(oponentSign, mySign)) score += 6;
+                if (IsDraw(oponentSign, mySign)) score += 3;
                 Console.WriteLine(score);
 
             }
             return score;
         }
 
-        private int GetRoundScore(string oponentMove, string myMove)
+        public string ConvertLetterToSign(string letter) => letter switch
         {
-            int oponentScore = GetScoreForMove(oponentMove);
-            int myScore = GetScoreForMove(myMove);
-            int roundScore = 0;
+            "A" or "X" => "Rock",
+            "B" or "Y" => "Paper",
+            "C" or "Z" => "Scissors",
+            _ => throw new NotImplementedException()
+        };
 
-            if (oponentScore > myScore) roundScore = 0;
-            if (oponentScore == myScore) roundScore = 3;
-            if (oponentScore < myScore) roundScore = 6;
-            return myScore + roundScore;
-        }
 
-        private int GetScoreForMove(string move)
+        private int GetScoreForSign(string sign) => sign switch
         {
-            int scoreForMove = 0;
-            switch (move)
-            {
-                case "A" or "X":
-                    scoreForMove = 1;
-                    break;
-                case "B" or "Y":
-                    scoreForMove = 2;
-                    break;
-                case "C" or "Z":
-                    scoreForMove = 3;
-                    break;
-            }
-            return scoreForMove;
-        }
+            "Rock" => 1,
+            "Paper" => 2,
+            "Scissors" => 3,
+            _ => throw new NotImplementedException()
+        };
+
+        private bool IsWin(string oponentSign, string mySign) => oponentSign == "Rock" && mySign == "Paper" ||
+                                                                 oponentSign == "Paper" && mySign == "Scissors" ||
+                                                                 oponentSign == "Scissors" && mySign == "Rock";
+
+        private bool IsDraw(string oponentSign, string mySign) => oponentSign ==  mySign;
     }
 }
