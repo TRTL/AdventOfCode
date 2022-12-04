@@ -1,6 +1,7 @@
 ﻿using AdventOfCode2022.Day_1;
 using AdventOfCode2022.Day_02;
 using AdventOfCode2022.Day_03;
+using AdventOfCode2022.Day_04;
 
 namespace AdventOfCode2022
 {
@@ -12,7 +13,8 @@ namespace AdventOfCode2022
 
             //Day1Method();
             //Day2Method();
-            Day3Method();
+            //Day3Method();
+            Day4Method();
 
         }
 
@@ -35,6 +37,13 @@ namespace AdventOfCode2022
             Day3 result = new Day3();
             Console.WriteLine("Day3 Result1: " + result.RucksackCompartments(1));
             Console.WriteLine("Day3 Result2: " + result.RucksackCompartments(2));
+        }
+
+        static void Day4Method()
+        {
+            Day4 result = new Day4();
+            Console.WriteLine("Day4 Result1: " + result.OverlapingPairs(1));
+            Console.WriteLine("Day4 Result2: " + result.OverlapingPairs(2));
         }
 
 
